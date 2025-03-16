@@ -1,0 +1,56 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+  <div class="col-6 offset-3">
+
+    <h1 class="col-11 offset-1" style="font-weight: bold;">SignUp&nbsp; on&nbsp; Elite&nbsp; Gateways </h1>
+
+    <form action="/signup" method="POST" class="needs-validation" novalidate>
+
+      <div class="mt-4">
+        <label for="username" class="form-label"><b>Username :</b> </label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter Username"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter Username.</div>
+      </div>
+
+      <div class="mt-4">
+        <label for="email" class="form-label"><b>Email :</b> </label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Enter Email"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <div class="invalid-feedback">Please enter valid Email.</div>
+      </div>
+
+      <div class="mt-4">
+        <label for="password" class="form-label"><b>Password :</b> </label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter Password"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Password should be strong</div>
+        <div class="invalid-feedback">Please enter a Strong Password.</div>
+      </div>
+
+      <button class="btn btn-success mt-4">SignUp</button>
+
+    </form>
+  </div>
+</div>
