@@ -20,7 +20,7 @@ const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-const port = 8080;
+const port =  process.env.PORT || 10000;
 const dbUrl = process.env.ATLASDB_URL;
 
 app.set("view engine", "ejs");
@@ -109,6 +109,6 @@ app.all("*" , (err,req,res,next) => {
     next(new ExpressError(404 , "Page not found"));
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0',  () => {
     console.log(`Server is litening on Port ${port}`);
 });
